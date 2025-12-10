@@ -1,11 +1,9 @@
 ﻿[build]
   publish = "."
-
 [[redirects]]
   from = "/admin/*"
   to = "/admin/index.html"
   status = 200
-
 [[headers]]
   for = "/*"
   [headers.values]
