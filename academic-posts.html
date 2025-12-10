@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akademik YazÄ±lar - Web Blog School</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <style>body { font-family: sans-serif; }</style>
+</head>
+<body>
+    <nav class="navbar bg-base-100 shadow-lg sticky top-0 z-50 no-print">
+        <div class="container mx-auto">
+            <a href="index.html" class="btn btn-ghost text-xl">Web Blog School</a>
+            <div class="flex-none hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="academic-posts.html">Akademik YazÄ±lar</a></li>
+                    <li><a href="events.html">Etkinlikler</a></li>
+                    <li><a href="cafeteria.html">Yemekhane</a></li>
+                    <li><a href="about.html">HakkÄ±nda</a></li>
+                </ul>
+                <label class="swap swap-rotate ml-4"><input type="checkbox" id="darkModeToggle" /><i class="fas fa-sun swap-off"></i><i class="fas fa-moon swap-on"></i></label>
+            </div>
+             <div class="flex-none lg:hidden">
+                <button class="btn btn-square btn-ghost" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+    <div id="mobileMenu" class="hidden lg:hidden bg-base-200 p-4">
+        <ul class="menu">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="academic-posts.html">Akademik YazÄ±lar</a></li>
+            <li><a href="events.html">Etkinlikler</a></li>
+            <li><a href="cafeteria.html">Yemekhane</a></li>
+            <li><a href="about.html">HakkÄ±nda</a></li>
+        </ul>
+    </div>
+
+    <section class="container mx-auto py-12 px-4">
+    <h1 class="text-3xl font-bold mb-6">Akademik YazÄ±lar</h1>
+    <div class="flex gap-2 mb-6">
+        <button class="btn btn-sm btn-primary" data-filter="all">TÃ¼mÃ¼</button>
+        <button class="btn btn-sm" data-filter="cs">Bilgisayar</button>
+        <button class="btn btn-sm" data-filter="eng">MÃ¼hendislik</button>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card bg-base-100 shadow-xl" data-department="cs">
+            <div class="card-body">
+                <span class="badge badge-cs">Bilgisayar</span>
+                <h2 class="card-title">Yapay Zeka</h2>
+                <p>GeleceÄŸin teknolojisi hakkÄ±nda...</p>
+                <div class="card-actions justify-end"><button class="btn btn-primary btn-sm">Oku</button></div>
+            </div>
+        </div>
+        <div class="card bg-base-100 shadow-xl" data-department="eng">
+             <div class="card-body">
+                <span class="badge badge-eng">MÃ¼hendislik</span>
+                <h2 class="card-title">SÃ¼rdÃ¼rÃ¼lebilir Enerji</h2>
+                <p>YeÅŸil enerji kaynaklarÄ±...</p>
+                <div class="card-actions justify-end"><button class="btn btn-primary btn-sm">Oku</button></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded mt-10">
+        <div>
+            <p>Â© 2025 Web Blog School</p>
+            <p class="text-sm opacity-60" data-current-date></p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script>if (window.netlifyIdentity) { window.netlifyIdentity.on("init", user => { if (!user) { window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; }); } }); }</script>
+</body>
+</html>
